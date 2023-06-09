@@ -59,8 +59,8 @@ describe('enMinusculas', () =>{
 
 describe('enlistandoNombres', () =>{
     it('Deberia crear una lista de los nombres pasados por parametros',() =>{
-        expect(enlistandoNombres('Leonardo, Martin, Natalia, Diego, Franco')).toBe(['Leonardo', 'Martin', 'Natalia', 'Diego', 'Franco'])
-        expect(enlistandoNombres('Pepe, Pablo, Pedro')).toBe(['Pepe', 'Pablo', 'Pedro'])
+        expect(enlistandoNombres('Leonardo, Martin, Natalia, Diego, Franco')).toEqual(['Leonardo', 'Martin', 'Natalia', 'Diego', 'Franco'])
+        expect(enlistandoNombres('Pepe, Pablo, Pedro')).toEqual(['Pepe', 'Pablo', 'Pedro'])
     });
 });
 
