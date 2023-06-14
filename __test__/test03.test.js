@@ -6,7 +6,10 @@ const {
     numPositivoNegativo,
     cambioPesos,
     climaActual,
-    vocales
+    vocales,
+    nValor,
+    numMúltiplo,
+    length
 } = require('../03.Condicionales/ejercicios03.js')
 
 describe('mayorEdad', function (){
@@ -87,3 +90,29 @@ describe('vocales', function (){
         expect(vocales('U')).toBe('Es vocal');
     });
 });
+
+describe('nValor', () => {
+    it('Deberia retornar el promedio de los tres', ()=>{
+        expect(nValor(100)).toEqual(75)
+        expect(nValor(81)).toEqual(61)
+        expect(nValor(431)).toEqual(324)
+    })
+})
+
+describe('numMúltiplo', ()=>{
+    it('Deberia devolver si el numero es multiplo', ()=>{
+        expect(numMúltiplo(40, 2)).toBe("Son múltiplos")
+        expect(numMúltiplo(181, 3)).toBe("No son múltiplos")
+        expect(numMúltiplo(160, 4)).toBe("Son múltiplos")
+        expect(numMúltiplo(555, 2)).toBe("No son múltiplos")
+    })
+})
+
+describe('length',  ()=>{
+    it('Deberia devolver true si str es mayor que 5', ()=>{
+        expect(length('Hola Mundo')).toBe(true)
+        expect(length('Hola')).toBe(false)
+        expect(length('JavaScript')).toBe(true)
+        expect(length('A')).toBe(false)
+    })
+})

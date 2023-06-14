@@ -24,7 +24,7 @@ describe('resta', function (){
     it('Debería retornar el resultado de la resta entre X e Y', function (){
         expect(resta(5, 4)).toEqual(1)
         expect(resta(10, 5)).toEqual(5)
-        expect(resta(40, 4)).toEqual(4)
+        expect(resta(40, 4)).toEqual(36)
     });
 });
 
@@ -62,9 +62,9 @@ describe('elevadoAlCubo', function (){
 
 describe('roundUp', function(){
     it('Debería devolver el numero redondeado hacia arriba', function(){
-        expect(roundUp(4, 3)).toBe(false);
-        expect(roundUp(2, 2)).toBe(true);
-        expect(roundUp(8, 8)).toBe(true);
+        expect(roundUp(4.3)).toBe(5);
+        expect(roundUp(2.2)).toBe(3);
+        expect(roundUp(8.8)).toBe(9);
     });
 });
 
@@ -88,7 +88,7 @@ describe('menorQue', function(){
     it('Debería devolver true si ambos números son iguales', function(){
         expect(menorQue(3, 4)).toBe(true);
         expect(menorQue(1, 2)).toBe(true);
-        expect(menorQue(9, 8)).toBe(true);
+        expect(menorQue(9, 8)).toBe(false);
     });
 });
 
